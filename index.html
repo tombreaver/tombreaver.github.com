@@ -54,7 +54,7 @@ function getXML(){
         request_success = true;
 //        String str = "";
         alert(request.responseXML);
-        var item = request.responseXML.DocumentElement.getElementsByTagName("item");
+        var item = request.responseXML.getElementsByTagName("item");
         /*
         alert(item1.length);
         var dataA = Array.prototype.slice.call(item1);
