@@ -53,11 +53,11 @@ function getXML(){
     if (request.readyState == 4 && request.status == 200) {
         request_success = true;
 //        String str = "";
-        alert(request.responseXML);
         var item = request.responseXML.getElementsByTagName("item");
+        alert(item);
         /*
         alert(item1.length);
-        var dataA = Array.prototype.slice.call(item1);
+        var dataA = Array.prototype.slice.call(item);
         for ( var i = 0; i < dataA.length; i++) {
             var oneItem = dataA[i].childNodes;
             var oneItemLen = oneItem.length;
