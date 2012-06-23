@@ -46,16 +46,15 @@ var dataArray = new Array();
 var itemArray = new Array();
 function getXML(){
     var request = new XMLHttpRequest();
-//    var my_div = document.getElementById("my_div");
-//    var my_div_1 = document.getElementById("my_div_1");
-    request.open("GET", "tr.xml", false);
+    request.open("GET", "tr.xml", true);
     //request.open("GET", "file:///Users/junxiong/scratch/treasure/tr.xml", false);
 
-    request.send("");
+    request.send(null);
     if (request.readyState == 4 && request.status == 200) {
         request_success = true;
 //        String str = "";
-        var item = request.responseXML.getElementsByTagName("item");
+        
+        var item = request.responseXML.DocumentElement.getElementsByTagName("item");
         /*
         alert(item1.length);
         var dataA = Array.prototype.slice.call(item1);
