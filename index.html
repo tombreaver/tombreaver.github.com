@@ -49,7 +49,7 @@ function getXML(){
     request.open("GET", "tr.xml", true);
     //request.open("GET", "file:///Users/junxiong/scratch/treasure/tr.xml", false);
 
-    request.send(null);
+    request.send("");
     if (request.readyState == 4 && request.status == 200) {
         request_success = true;
 //        String str = "";
