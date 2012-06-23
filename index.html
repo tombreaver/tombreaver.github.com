@@ -53,7 +53,6 @@ function getXML(){
     if (request.readyState == 4 && request.status == 200) {
         request_success = true;
 //        String str = "";
-        alter(request.responseXML);
         var item = request.responseXML.DocumentElement.getElementsByTagName("item");
         /*
         alert(item1.length);
