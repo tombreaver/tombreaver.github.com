@@ -54,7 +54,6 @@ function getXML(){
         request_success = true;
 //        String str = "";
         var item = request.responseXML.getElementsByTagName("item");
-        alert(item);
         /*
         alert(item1.length);
         var dataA = Array.prototype.slice.call(item);
@@ -79,14 +78,14 @@ function getXML(){
         }
             
         alert(dataArray.length); */
-        document.write ("item:"+item(0).text ) ;
+        document.write ("item:"+item[0].firstChild.data);
     }
     else {
         document.write ("Request failed"); //: ready state=" + request.readyState + " status=" + request.status);
     }
 }
 
-/*
+d/*
 function DidSyncRequestSucceed() {
     return request_success;
 }*/
