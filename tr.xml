@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="gb2312"?>
+<root>
+    <item id='1'>
+        <name>兵马俑1</name)
+        <xpt>238</xpt>
+        <ypt>185</ypt>
+    </item>
+    <item id='2'>
+        <name>兵马俑2</name)
+        <xpt>238</xpt>
+        <ypt>185</ypt>
+    </item>
+    <item id='3'>
+        <name>兵马俑3</name)
+        <xpt>238</xpt>
+        <ypt>185</ypt>
+    </item>
+    <item id='4'>
+        <name>兵马俑4</name)
+        <xpt>238</xpt>
+        <ypt>185</ypt>
+    </item>
+    <item id='5'>
+        <name>兵马俑5</name)
+        <xpt>238</xpt>
+        <ypt>185</ypt>
+    </item>
+
+</root>

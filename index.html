@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JS_XML</title>
+
+<style type="text/css">
+<!--
+body
+{
+ margin-left: 0px;
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ font-size: 9pt;
+}
+A
+{
+ text-decoration:none;
+ font-family: "宋体";
+ font-size: 32pt;
+ COLOR:#000000;
+} 
+-->
+</style>
+
+</head>
+
+<Script Language="Javascript">
+function GetXmlData(){
+    var str="";
+    var NewName="";
+    var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+    xmlDoc.async="false";
+    xmlDoc.load("tr.xml");
+    if(xmlDoc.parseError.errorCode != 0) {
+        alert("sorry!");
+        window.close();
+        return; }
+    else {
+        var item = xmlDoc.documentElement.selectNodes("item");
+        document.write ("item:"+item(0).text ) ;}
+}
+
+var request_success = false;
+var dataArray = new Array();
+var itemArray = new Array();
+function getXML(){
+    var request = new XMLHttpRequest();
+//    var my_div = document.getElementById("my_div");
+//    var my_div_1 = document.getElementById("my_div_1");
+    request.open("GET", "http://readclassical.github.com/tr.xml", false);
+    //request.open("GET", "file:///Users/junxiong/scratch/treasure/tr.xml", false);
+
+    request.send("");
+    if (request.readyState == 4 && request.status == 200) {
+        request_success = true;
+//        String str = "";
+        var item = request.responseXML.getElementsByTagName("item");
+        /*
+        alert(item1.length);
+        var dataA = Array.prototype.slice.call(item1);
+        for ( var i = 0; i < dataA.length; i++) {
+            var oneItem = dataA[i].childNodes;
+            var oneItemLen = oneItem.length;
+                
+            itemArray = new Array();
+            for ( var j = 1; j < oneItemLen; j++) {
+                itemArray.push(oneItem[j].textContent);
+                j++;
+            }
+            dataArray.push(itemArray);
+        }
+        for ( var k1 = 0; k1 < dataArray.length; k1++) {
+            var oneItemData = dataArray[k1];
+            str += k1 + " ";
+            for ( var k2 = 0; k2 < oneItemData.length; k2++) {
+                str += oneItemData[k2] + " " + k2;
+            }
+            str += "<br/>";
+        }
+            
+        alert(dataArray.length); */
+        document.write ("item:"+item(0).text ) ;
+    }
+    else {
+        document.write ("Request failed"); //: ready state=" + request.readyState + " status=" + request.status);
+    }
+}
+
+/*
+function DidSyncRequestSucceed() {
+    return request_success;
+}*/
+
+
+</Script>
+
+<body>
+<a href="javascript:getXML();">look</a>
+</body></html>
+
